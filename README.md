@@ -29,7 +29,7 @@ Durante o processo, enfrentei problemas reais (como erro de build e ficheiros n√
 
 ##  ARQUITECTURA
 
-```text
+
         +-------------------+
         |   C√≥digo (Git)    |
         +---------+---------+
@@ -71,7 +71,7 @@ http://localhost:5000
 docker build -t myapp .
 docker run -p 5000:5000 myapp
 
-
+## CI/CD PIPELINE
 Pipeline criado com GitHub Actions:
 Trigger: push na branch main
 Etapas:
