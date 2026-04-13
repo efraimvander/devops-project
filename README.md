@@ -29,7 +29,7 @@ Durante o processo, enfrentei problemas reais (como erro de build e ficheiros n√
 
 ##  ARQUITECTURA
 
-
+```text
         +-------------------+
         |   C√≥digo (Git)    |
         +---------+---------+
