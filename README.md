@@ -18,7 +18,7 @@ Durante o processo, enfrentei problemas reais (como erro de build e ficheiros n�
 
 ---
 
-## O QUE ESTE PROJETO FAZ
+## O QUE ESTE PROJECTO FAZ
 
 - Cria uma aplicação simples em Python (Flask)
 - Containeriza a aplicação com Docker
@@ -27,7 +27,7 @@ Durante o processo, enfrentei problemas reais (como erro de build e ficheiros n�
 
 ---
 
-##  ARQUITETURA
+##  ARQUITECTURA
 
 ```text
         +-------------------+
