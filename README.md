@@ -1,4 +1,4 @@
-# DevOps Project — From Local to CI/CD
+# DevOps Project - From Local to CI/CD
 
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-black)
