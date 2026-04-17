@@ -1,11 +1,16 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     nome = os.getenv("NOME", "DevOps")
-    return f"Olá {nome}"
+    return render_template("index.html", nome=nome)
 
-app.run(host="0.0.0.0", port=5000)
+@app.route("/health")
+def health():
+    return {"status": "ok"}, 200
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
