@@ -1,11 +1,11 @@
-name: CI/CD Pipeline
+name: CI/CD Deploy
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
     - name: Save image
       run: docker save myapp | gzip > myapp.tar.gz
 
-    - name: Copy image to EC2
+    - name: Copy to EC2
       uses: appleboy/scp-action@v0.1.3
       with:
         host: ${{ secrets.EC2_HOST }}
@@ -37,4 +37,7 @@ jobs:
           docker load < myapp.tar.gz
           docker stop myapp || true
           docker rm myapp || true
-          docker run -d -p 5000:5000 --name myapp myapp
+          docker run -d -p 5000:5000 \
+            -e NOME=Production \
+            --restart always \
+            --name myapp myapp
