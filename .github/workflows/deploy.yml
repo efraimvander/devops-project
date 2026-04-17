@@ -1,4 +1,4 @@
-name: CI/CD Deploy
+name: CI/CD Deploy 
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
         source: "myapp.tar.gz"
         target: "~/"
 
-    - name: Deploy on EC2
+    - name: Deploy on EC2 Instance
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.EC2_HOST }}
